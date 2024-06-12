@@ -15,8 +15,8 @@ public class Main {
 
         System.out.println("O carrocho está "+ cachorro1.interagir("carinho"));
         System.out.println("O carrocho está "+ cachorro1.interagir("vai dormir"));
+        System.out.println("O cachorro está " + cachorro1.interagir("pisar na patinha"));
         System.out.println("O carrocho está "+ cachorro1.interagir("nada"));
-
-
     }
+
 }
