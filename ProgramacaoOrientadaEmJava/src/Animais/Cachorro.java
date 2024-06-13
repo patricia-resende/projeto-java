@@ -1,30 +1,19 @@
 package Animais;
 
-public class Cachorro {
+public class Cachorro extends Animal{
 
         //atributos
 
         static int numeroDeCachorros;
-        private String nome;
-        private String cor;
-        private int altura;
-        private double peso;
         private int tamanhoDoRabo;
-        private String estadoDeEspirito;
+
 
         //construtores
 
-        public Cachorro(){}
-        public Cachorro(String nome, String cor, int altura, double peso, int tamanhoDoRabo, String estadoDeEspirito) {
-                this.nome = nome;
-                this.cor = cor;
-                this.altura = altura;
-                this.peso = peso;
-                this.tamanhoDoRabo = tamanhoDoRabo;
-                this.estadoDeEspirito = estadoDeEspirito;
-
-                numeroDeCachorros ++;
+        public Cachorro(String nome, String cor, double peso) {
+                super(nome, cor, peso);
         }
+
 
         //métodos
 
@@ -77,11 +66,39 @@ public class Cachorro {
         }
 
         public String getEstadoDeEspirito() {
-                return estadoDeEspirito;
+                return estadoEspirito;
         }
 
         public void setEstadoDeEspirito(String estadoDeEspirito) {
-                this.estadoDeEspirito = estadoDeEspirito;
+                this.estadoEspirito = estadoDeEspirito;
         }
 
+
+
+        public String pegar() {
+                return "Bolinha";
         }
+        public String interagir(String acao) {
+
+
+                switch (acao){
+                        case "carinho":this.estadoEspirito = "feliz"; break;
+                        case "vai dormir":this.estadoEspirito = "bravo"; break;
+                        case "pisar na patinha":this.estadoEspirito = "triste"; break;
+                        default:this.estadoEspirito = "neutro";break;
+                }
+                return estadoEspirito;
+        }
+
+        @Override
+        public String toString() {
+                return "Cachorro{" +
+                        "nome='" + nome + '\'' +
+                        '}';
+        }
+
+        @Override
+        public void soar() {
+                System.out.println("AU AU");
+        }
+}
