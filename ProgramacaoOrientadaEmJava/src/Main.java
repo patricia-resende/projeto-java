@@ -3,20 +3,19 @@ import Animais.Cachorro;
 public class Main {
     public static void main(String[] args) {
 
-        Cachorro cachorro1 = new Cachorro();
-        cachorro1.setNome("Puppy");
-        cachorro1.setCor("Marrom");
-        cachorro1.setAltura(25);
-        cachorro1.setPeso(5.5);
-        cachorro1.setTamanhoDoRabo(5);
+        Cachorro cachorro1 = new Cachorro("Rex", "Branco", 15, 1.44, 3, "vai dormir");
 
-        cachorro1.latir();
-        System.out.println("O cachorro pegou uma " + cachorro1.pegar());
+        System.out.println(cachorro1.getNumeroDeCachorros());
 
-        System.out.println("O carrocho está "+ cachorro1.interagir("carinho"));
-        System.out.println("O carrocho está "+ cachorro1.interagir("vai dormir"));
-        System.out.println("O cachorro está " + cachorro1.interagir("pisar na patinha"));
-        System.out.println("O carrocho está "+ cachorro1.interagir("nada"));
+        Cachorro cachorro2 = new Cachorro("Puppy", "Marrom", 25, 5.5, 5, "nada");
+
+        System.out.println(cachorro2.getNumeroDeCachorros());
+        System.out.println(cachorro1.getNumeroDeCachorros());
+
+
+
+
+
     }
 
 
